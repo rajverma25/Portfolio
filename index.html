@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raj Verma — Video Growth Partner</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--gold:#C49A3C;--gl:#C49A3C12;--bg:#080808;--bg2:#0f0f0f;--bg3:#161616;--b:rgba(255,255,255,0.06);--b2:rgba(255,255,255,0.11);--t:#f0ede6;--t2:#9a9690;--t3:#5a5650;--green:#25D366}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--t);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden}
+@keyframes fu{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.fade{animation:fu 0.8s cubic-bezier(.16,1,.3,1) both}
+.f1{animation-delay:.05s}.f2{animation-delay:.15s}.f3{animation-delay:.25s}.f4{animation-delay:.35s}.f5{animation-delay:.45s}
+.page{max-width:840px;margin:0 auto;padding:2.5rem 1.25rem 5rem}
+hr.dv{border:none;border-top:0.5px solid var(--b);margin:3rem 0}
+.sl{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;display:flex;align-items:center;gap:10px}
+.sl::after{content:'';flex:1;height:0.5px;background:var(--b)}
+.tg{font-family:'Playfair Display',serif;font-size:clamp(24px,5vw,44px);font-weight:400;font-style:italic;line-height:1.2;margin-bottom:1rem}
+.tg strong{font-style:normal;font-weight:600;color:var(--gold)}
+.sub{font-size:15px;color:var(--t2);line-height:1.85;max-width:600px;margin-bottom:2rem}
+
+/* HERO */
+.hero{display:flex;align-items:center;gap:1.5rem;margin-bottom:2rem;padding-bottom:2rem;border-bottom:0.5px solid var(--b)}
+.av{width:68px;height:68px;border-radius:50%;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;background:var(--bg2);position:relative}
+.av::after{content:'';position:absolute;inset:-4px;border-radius:50%;border:0.5px solid rgba(196,154,60,.2)}
+.ini{font-family:'Playfair Display',serif;font-size:24px;font-weight:600;color:var(--gold)}
+.ey{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem}
+.hn{font-family:'Playfair Display',serif;font-size:28px;font-weight:600;line-height:1.1;margin-bottom:.5rem}
+.social-row{display:flex;gap:8px;flex-wrap:wrap}
+.social-btn{font-size:11px;color:var(--t3);border:0.5px solid var(--b);padding:4px 10px;border-radius:4px;text-decoration:none;transition:all .2s}
+.social-btn:hover{color:var(--gold);border-color:rgba(196,154,60,.4);background:var(--gl)}
+
+/* TICKER */
+.ticker-wrap{overflow:hidden;border-top:0.5px solid var(--b);border-bottom:0.5px solid var(--b);padding:.65rem 0;margin-bottom:2.5rem;-webkit-mask-image:linear-gradient(to right,transparent,black 8%,black 92%,transparent);mask-image:linear-gradient(to right,transparent,black 8%,black 92%,transparent)}
+.ticker-track{display:flex;gap:3rem;width:max-content;animation:ticker 35s linear infinite}
+.ticker-track span{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--t3);white-space:nowrap}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* HOOK BAR */
+.hook-bar{background:var(--bg2);border:0.5px solid rgba(196,154,60,.2);border-radius:8px;padding:1rem 1.25rem;margin-bottom:2.5rem;display:flex;align-items:flex-start;gap:12px}
+.hook-dot{width:7px;height:7px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:5px;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.hook-text{font-size:14px;color:var(--t2);line-height:1.6}
+.hook-text b{color:var(--t);font-weight:500}
+
+/* HERO HEADLINE */
+.hero-headline{margin-bottom:2.5rem}
+.hero-headline h1{font-family:'Playfair Display',serif;font-size:clamp(28px,5.5vw,52px);font-weight:600;line-height:1.15;margin-bottom:1rem}
+.hero-headline h1 span{color:var(--gold);font-style:italic}
+.hero-sub{font-size:16px;color:var(--t2);line-height:1.8;max-width:580px;margin-bottom:2rem}
+.trust-line{font-size:12px;color:var(--t3);margin-top:.75rem;letter-spacing:.03em}
+.trust-line span{color:var(--gold)}
+
+/* BUTTONS */
+.bw{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:#1a1100;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;padding:12px 24px;border-radius:6px;text-decoration:none;border:none;transition:opacity .2s,transform .15s;cursor:pointer;letter-spacing:.02em}
+.bw:hover{opacity:.9;transform:translateY(-1px)}
+.bwo{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--gold);font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;padding:12px 24px;border-radius:6px;text-decoration:none;border:0.5px solid rgba(196,154,60,.45);transition:background .2s,transform .15s}
+.bwo:hover{background:var(--gl);transform:translateY(-1px)}
+.bwa{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;padding:12px 24px;border-radius:6px;text-decoration:none;transition:opacity .2s,transform .15s}
+.bwa:hover{opacity:.9;transform:translateY(-1px)}
+.wi{width:15px;height:15px;fill:currentColor;flex-shrink:0}
+.ctr{display:flex;gap:10px;flex-wrap:wrap;margin-top:1.5rem}
+
+/* PROBLEM SECTION */
+.prob-list{display:flex;flex-direction:column;gap:.85rem;margin-top:1.5rem}
+.prob-item{display:flex;align-items:flex-start;gap:14px;background:var(--bg2);border:0.5px solid var(--b);border-radius:10px;padding:1.1rem 1.25rem;transition:border-color .2s}
+.prob-item:hover{border-color:rgba(196,154,60,.25)}
+.prob-x{font-size:16px;flex-shrink:0;margin-top:1px}
+.prob-text{font-size:14px;color:var(--t2);line-height:1.55}
+.prob-text b{color:var(--t);font-weight:500}
+
+/* SOLUTION SECTION */
+.sol-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:1.5rem}
+.sol-item{border:0.5px solid var(--b);border-radius:12px;padding:1.35rem;background:var(--bg2);transition:border-color .25s,transform .2s}
+.sol-item:hover{border-color:rgba(196,154,60,.3);transform:translateY(-2px)}
+.sol-icon{font-size:22px;margin-bottom:.75rem}
+.sol-title{font-size:13px;font-weight:500;color:var(--t);margin-bottom:.4rem;letter-spacing:.02em}
+.sol-desc{font-size:13px;color:var(--t3);line-height:1.6}
+
+/* AUTHORITY */
+.auth-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1.5rem}
+.auth-item{display:flex;align-items:flex-start;gap:12px;border:0.5px solid var(--b);border-radius:10px;padding:1.1rem 1.25rem;background:var(--bg2)}
+.auth-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);margin-top:7px;flex-shrink:0}
+.auth-text{font-size:14px;color:var(--t2);line-height:1.55}
+.auth-text b{color:var(--t);font-weight:500}
+
+/* BONUS LINE */
+.bonus-bar{background:var(--gl);border:0.5px solid rgba(196,154,60,.2);border-radius:8px;padding:1rem 1.25rem;text-align:center;margin:2.5rem 0;font-family:'Playfair Display',serif;font-size:16px;font-style:italic;color:var(--t2);line-height:1.6}
+.bonus-bar span{color:var(--gold);font-style:normal;font-weight:600}
+
+/* PROCESS */
+.process-steps{display:flex;flex-direction:column;gap:0;margin-top:1.5rem}
+.proc-item{display:flex;align-items:flex-start;gap:1.25rem;position:relative;padding-bottom:2rem}
+.proc-item:last-child{padding-bottom:0}
+.proc-item:last-child .proc-line{display:none}
+.proc-num-wrap{display:flex;flex-direction:column;align-items:center;flex-shrink:0}
+.proc-num{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:var(--gold);background:var(--bg2);flex-shrink:0}
+.proc-line{width:1px;flex:1;background:linear-gradient(to bottom,rgba(196,154,60,.3),transparent);margin-top:8px;min-height:30px}
+.proc-content{padding-top:6px}
+.proc-title{font-size:15px;font-weight:500;color:var(--t);margin-bottom:.3rem}
+.proc-desc{font-size:13px;color:var(--t3);line-height:1.6}
+
+/* NICHE TAGS */
+.niche-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:2rem}
+.ntag{font-size:12px;color:var(--t2);background:var(--bg2);border:0.5px solid var(--b);padding:5px 13px;border-radius:20px}
+
+/* STATS */
+.st{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;background:var(--bg2);border:0.5px solid var(--b);border-radius:14px;padding:1.5rem 1rem;text-align:center;margin:2rem 0}
+.sn{font-family:'Playfair Display',serif;font-size:32px;font-weight:600;color:var(--gold);line-height:1}
+.sx{font-size:11px;color:var(--t3);margin-top:6px;line-height:1.4}
+
+/* FREE CARD */
+.fc{background:linear-gradient(135deg,var(--bg2) 0%,rgba(196,154,60,.04) 100%);border:0.5px solid rgba(196,154,60,.25);border-radius:14px;padding:1.75rem;margin-bottom:2rem}
+.fb{display:inline-block;background:var(--gl);color:var(--gold);font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:5px 12px;border-radius:4px;border:0.5px solid rgba(196,154,60,.3);margin-bottom:1rem}
+.ftt{font-family:'Playfair Display',serif;font-size:20px;font-weight:600;margin-bottom:.5rem;line-height:1.25}
+.fd{font-size:14px;color:var(--t2);line-height:1.75;margin-bottom:1.25rem}
+.pks{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.5rem}
+.pk{font-size:12px;color:var(--t2);background:var(--bg3);border:0.5px solid var(--b);padding:4px 11px;border-radius:20px}
+
+/* TIERS */
+.tgr{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin-top:1.25rem}
+.tr{border:0.5px solid var(--b);border-radius:14px;padding:1.75rem;background:var(--bg2);position:relative;overflow:hidden;transition:border-color .2s}
+.tr.fe{border:1.5px solid var(--gold);background:linear-gradient(145deg,var(--bg2) 0%,rgba(196,154,60,.03) 100%)}
+.tt{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;display:inline-block;padding:3px 10px;border-radius:3px;margin-bottom:.75rem}
+.tt1{background:var(--bg3);color:var(--t3)}.tt2{background:var(--gl);color:var(--gold)}
+.tn{font-family:'Playfair Display',serif;font-size:22px;font-weight:600;line-height:1.2;margin-bottom:.3rem}
+.tf{font-size:13px;color:var(--t3);font-style:italic;margin-bottom:1rem}
+.pr{display:flex;align-items:baseline;gap:6px;margin:.75rem 0 .3rem}
+.pc{font-family:'Playfair Display',serif;font-size:42px;font-weight:600;color:var(--gold);line-height:1}
+.pp{font-size:13px;color:var(--t3)}
+.pbill{font-size:11px;color:var(--t3);margin-bottom:1rem;font-style:italic}
+.vn{font-size:12px;color:var(--t3);background:var(--bg3);border:0.5px solid var(--b);border-radius:6px;padding:9px 12px;line-height:1.55}
+.ts{border:none;border-top:0.5px solid var(--b);margin:1.25rem 0}
+.fi{display:flex;align-items:flex-start;gap:10px;margin-bottom:.9rem}
+.dot{width:6px;height:6px;border-radius:50%;margin-top:8px;flex-shrink:0}
+.dg{background:var(--gold)}.dgr{background:var(--t3)}
+.ftx{font-size:14px;line-height:1.55}
+.ftx b{font-weight:500;color:var(--t)}
+.ftx span{color:var(--t3)}
+.rb{position:absolute;top:16px;right:-1px;background:var(--gold);color:#1a1100;font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:4px 14px 4px 10px;border-radius:3px 0 0 3px}
+
+/* PROJECTS */
+.pgr{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1.25rem}
+.pcd{border:0.5px solid var(--b);border-radius:12px;padding:1.4rem;background:var(--bg2);text-decoration:none;color:var(--t);transition:border-color .25s,transform .25s;display:block}
+.pcd:hover{border-color:rgba(196,154,60,.4);transform:translateY(-4px)}
+.pic{font-size:26px;margin-bottom:.8rem}
+.pti{font-family:'Playfair Display',serif;font-size:16px;font-weight:600;margin-bottom:.35rem}
+.pde{font-size:12px;color:var(--t3);line-height:1.65;margin-bottom:1rem}
+.plk{font-size:11px;color:var(--gold);letter-spacing:.08em;text-transform:uppercase}
+.plk::after{content:' →'}
+
+/* TESTIMONIALS */
+.test-placeholder{border:0.5px dashed rgba(196,154,60,.25);border-radius:14px;padding:2.5rem 1.5rem;text-align:center;background:var(--bg2)}
+.test-icon{font-size:28px;margin-bottom:.75rem}
+.test-title{font-family:'Playfair Display',serif;font-size:17px;font-weight:600;margin-bottom:.5rem}
+.test-sub{font-size:13px;color:var(--t3);line-height:1.65}
+
+/* FAQ */
+.faq-item{border-bottom:0.5px solid var(--b);overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 0;cursor:pointer;gap:1rem}
+.faq-q:hover .faq-q-text{color:var(--gold)}
+.faq-q-text{font-size:14px;font-weight:500;line-height:1.4;transition:color .2s}
+.faq-icon{width:20px;height:20px;border:0.5px solid var(--b);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--gold);font-size:14px;transition:transform .3s,background .2s}
+.faq-item.open .faq-icon{transform:rotate(45deg);background:var(--gl)}
+.faq-a{font-size:13px;color:var(--t2);line-height:1.75;max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s ease}
+.faq-item.open .faq-a{max-height:300px;padding-bottom:1.1rem}
+
+/* FINAL CTA */
+.cta-final{background:linear-gradient(135deg,var(--bg2) 0%,rgba(196,154,60,.06) 100%);border:0.5px solid rgba(196,154,60,.2);border-radius:14px;padding:2.5rem 1.75rem;text-align:center;margin-top:3rem}
+.cta-final-title{font-family:'Playfair Display',serif;font-size:clamp(22px,4vw,36px);font-weight:600;line-height:1.2;margin-bottom:.75rem}
+.cta-final-title span{color:var(--gold)}
+.cta-final-sub{font-size:14px;color:var(--t2);margin-bottom:2rem;max-width:460px;margin-left:auto;margin-right:auto;line-height:1.75}
+.cta-center{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+/* QUOTE */
+.qt{background:var(--bg2);border:0.5px solid var(--b);border-radius:12px;padding:1.5rem 1.75rem;display:flex;gap:1.25rem;align-items:flex-start;margin:2rem 0}
+.ql{width:3px;border-radius:2px;background:var(--gold);flex-shrink:0;align-self:stretch;min-height:40px}
+.qx{font-family:'Playfair Display',serif;font-size:17px;font-style:italic;line-height:1.65}
+
+.fn{font-size:12px;color:var(--t3);text-align:center;margin-top:1.5rem;line-height:1.7}
+.fn a{color:var(--gold);text-decoration:none}
+
+/* FOOTER */
+.footer-social{border-top:0.5px solid var(--b);margin-top:3rem;padding-top:2rem;text-align:center}
+.footer-links{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:.75rem}
+.footer-link{font-size:12px;color:var(--t3);text-decoration:none;letter-spacing:.05em;transition:color .2s}
+.footer-link:hover{color:var(--gold)}
+.footer-sep{color:var(--b2);font-size:12px}
+.footer-copy{font-size:11px;color:var(--t3);letter-spacing:.05em}
+
+@media(max-width:520px){
+  .st{gap:.5rem;padding:1.25rem .75rem}.sn{font-size:26px}.sx{font-size:10px}
+  .hero{gap:1rem}.hn{font-size:24px}
+  .tgr,.pgr,.sol-list,.auth-grid{grid-template-columns:1fr}
+  .cta-center{flex-direction:column;align-items:center}
+  .cta-final{padding:2rem 1.25rem}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero fade f1">
+    <div class="av"><span class="ini">RV</span></div>
+    <div>
+      <div class="ey">Video Growth Partner · Content Strategist</div>
+      <div class="hn">Raj Verma</div>
+    </div>
+  </div>
+
+  <!-- HERO HEADLINE -->
+  <section class="hero-headline fade f2">
+    <h1>I Help Coaches Turn Their Content Into<br><span>High-Converting Reels.</span></h1>
+    <p class="hero-sub">More views. More retention. More clients — through scroll-stopping edits engineered to perform, not just look good.</p>
+    <div class="trust-line">Not just editing — <span>I help you grow.</span></div>
+  </section>
+
+  <!-- HOOK BAR -->
+  <div class="hook-bar fade f3">
+    <div class="hook-dot"></div>
+    <div class="hook-text"><b>Your content is your storefront.</b> If it's not attracting, qualifying, and converting your ideal clients on autopilot — you're leaving serious revenue on the table every single day.</div>
+  </div>
+
+  <hr class="dv">
+
+  <!-- PROBLEM -->
+  <section>
+    <div class="sl fade f1">The Problem</div>
+    <h2 class="tg fade f2">Struggling To Grow<br>With Your <strong>Content?</strong></h2>
+    <div class="prob-list fade f3">
+      <div class="prob-item">
+        <span class="prob-x">❌</span>
+        <div class="prob-text"><b>Your reels don't grab attention in the first 3 seconds</b> — viewers scroll past before your message even starts.</div>
+      </div>
+      <div class="prob-item">
+        <span class="prob-x">❌</span>
+        <div class="prob-text"><b>Your audience drops off before the main value</b> — poor retention means the algorithm stops pushing your content.</div>
+      </div>
+      <div class="prob-item">
+        <span class="prob-x">❌</span>
+        <div class="prob-text"><b>Your content looks good... but doesn't convert</b> — views aren't filling your calendar with qualified leads.</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="dv">
+
+  <!-- TICKER -->
+  <div class="ticker-wrap fade f1">
+    <div class="ticker-track">
+      <span>✦ RETENTION EDITING</span><span>✦ VIRAL THUMBNAILS</span><span>✦ CONTENT REPURPOSING</span><span>✦ WEEKLY TREND ANALYSIS</span><span>✦ HOOK SCRIPTING</span><span>✦ MANYCHAT AUTOMATION</span><span>✦ ACCOUNT MANAGEMENT</span><span>✦ GROWTH STRATEGY</span><span>✦ SHORT-FORM VIDEO</span><span>✦ SUBTITLE PSYCHOLOGY</span>
+      <span>✦ RETENTION EDITING</span><span>✦ VIRAL THUMBNAILS</span><span>✦ CONTENT REPURPOSING</span><span>✦ WEEKLY TREND ANALYSIS</span><span>✦ HOOK SCRIPTING</span><span>✦ MANYCHAT AUTOMATION</span><span>✦ ACCOUNT MANAGEMENT</span><span>✦ GROWTH STRATEGY</span><span>✦ SHORT-FORM VIDEO</span><span>✦ SUBTITLE PSYCHOLOGY</span>
+    </div>
+  </div>
+
+  <!-- SOLUTION -->
+  <section>
+    <div class="sl fade f1">The Solution</div>
+    <h2 class="tg fade f2">That's Where <strong>I Come In.</strong></h2>
+    <p class="sub fade f2">I specialize in editing reels that are built to perform — not just look good. Every edit is engineered with one goal: turning viewers into booked clients.</p>
+    <div class="sol-list fade f3">
+      <div class="sol-item">
+        <div class="sol-icon">🎯</div>
+        <div class="sol-title">Hook Optimization</div>
+        <div class="sol-desc">AI-engineered first-3-second hooks that physically stop the scroll — tested against viral content formats.</div>
+      </div>
+      <div class="sol-item">
+        <div class="sol-icon">🧠</div>
+        <div class="sol-title">Subtitle Psychology</div>
+        <div class="sol-desc">Strategic caption placement and styling that guides the eye and keeps viewers locked in till the end.</div>
+      </div>
+      <div class="sol-item">
+        <div class="sol-icon">⚡</div>
+        <div class="sol-title">Fast-Paced Cuts</div>
+        <div class="sol-desc">Dynamic pacing and pattern interrupts that boost retention and signal quality to the algorithm.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BONUS LINE -->
+  <div class="bonus-bar fade f3">
+    You're already creating content...<br><span>I just make sure people actually watch it.</span>
+  </div>
+
+  <hr class="dv">
+
+  <!-- AUTHORITY -->
+  <section>
+    <div class="sl fade f1">Why Work With Me</div>
+    <h2 class="tg fade f2">Strategy + Editing.<br><strong>Not Just Cutting.</strong></h2>
+    <div class="auth-grid fade f3">
+      <div class="auth-item"><div class="auth-dot"></div><div class="auth-text"><b>Focused on coaches & experts</b> — I understand your audience's psychology and what makes them book calls.</div></div>
+      <div class="auth-item"><div class="auth-dot"></div><div class="auth-text"><b>Editing built on viral formats</b> — every cut is informed by what's actually working on the algorithm right now.</div></div>
+      <div class="auth-item"><div class="auth-dot"></div><div class="auth-text"><b>Not just editing — full strategy</b> — hooks, scripting, trends, and performance analysis included.</div></div>
+      <div class="auth-item"><div class="auth-dot"></div><div class="auth-text"><b>AI-powered content engine</b> — ManyChat automation turns every comment into a DM lead while you sleep.</div></div>
+    </div>
+
+    <div class="qt fade f4">
+      <div class="ql"></div>
+      <div class="qx">"You focus on coaching. I handle the attention, retention, and conversion. Let's build a content engine that works around the clock."</div>
+    </div>
+  </section>
+
+  <hr class="dv">
+
+  <!-- PROCESS -->
+  <section>
+    <div class="sl fade f1">How It Works</div>
+    <h2 class="tg fade f2">Simple &amp; <strong>Effective Process.</strong></h2>
+    <div class="process-steps fade f3">
+      <div class="proc-item">
+        <div class="proc-num-wrap"><div class="proc-num">1</div><div class="proc-line"></div></div>
+        <div class="proc-content">
+          <div class="proc-title">You send your raw footage</div>
+          <div class="proc-desc">No script needed. No fancy setup. Just hit record and send me what you've got — I handle everything from there.</div>
+        </div>
+      </div>
+      <div class="proc-item">
+        <div class="proc-num-wrap"><div class="proc-num">2</div><div class="proc-line"></div></div>
+        <div class="proc-content">
+          <div class="proc-title">I turn it into a high-converting reel</div>
+          <div class="proc-desc">Hook engineering, retention editing, subtitle psychology, thumbnail design — delivered in 3-5 days.</div>
+        </div>
+      </div>
+      <div class="proc-item">
+        <div class="proc-num-wrap"><div class="proc-num">3</div><div class="proc-line"></div></div>
+        <div class="proc-content">
+          <div class="proc-title">You post &amp; see the difference</div>
+          <div class="proc-desc">Watch your retention climb, your reach expand, and your DMs fill with qualified leads ready to book.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="dv">
+
+  <!-- PORTFOLIO -->
+  <section>
+    <div class="sl fade f1">Portfolio</div>
+    <h2 class="tg fade f2">Work that <strong>drives results.</strong></h2>
+    <p class="sub fade f2">Real projects engineered for retention, authority, and conversion.</p>
+    <div class="pgr fade f3">
+      <a class="pcd" href="https://drive.google.com/drive/folders/1v-kGmsiT8mrj06itJ1R4K5VkHaeAYjUQ?usp=drive_link" target="_blank">
+        <div class="pic">🎬</div><div class="pti">Coaching Content</div>
+        <div class="pde">High-retention Reels & Shorts for coaches — hooks, pacing, and storytelling engineered to convert.</div>
+        <div class="plk">View Projects</div>
+      </a>
+      <a class="pcd" href="https://drive.google.com/drive/folders/1LKjGkzQ-VmopTeioMHYjKwipcz6F0O7i?usp=drive_link" target="_blank">
+        <div class="pic">⚡</div><div class="pti">Before &amp; After</div>
+        <div class="pde">Raw footage transformed into scroll-stopping, authority-building content that gets results.</div>
+        <div class="plk">View Transformations</div>
+      </a>
+      <a class="pcd" href="https://drive.google.com/drive/folders/1l5YxGjqFSDhKPhjMGFI9lLKzXwM3luew?usp=drive_link" target="_blank">
+        <div class="pic">🖼️</div><div class="pti">Thumbnails &amp; Covers</div>
+        <div class="pde">CTR-optimized visuals built to stop the scroll and drive clicks to your content.</div>
+        <div class="plk">View Thumbnails</div>
+      </a>
+    </div>
+  </section>
+
+  <hr class="dv">
+
+  <!-- SERVICES -->
+  <section>
+    <div class="sl fade f1">Growth Partnership Plans</div>
+    <h2 class="tg fade f2">A system built to grow<br>your brand <strong>on autopilot.</strong></h2>
+
+    <div class="niche-row fade f2">
+      <span class="ntag">Dating &amp; Relationships</span><span class="ntag">Life Coaching</span><span class="ntag">Mindset &amp; Psychology</span><span class="ntag">Fitness &amp; Health</span><span class="ntag">Business Coaching</span><span class="ntag">Spirituality</span><span class="ntag">Personal Finance</span>
+    </div>
+
+    <div class="st fade f3">
+      <div><div class="sn">3×</div><div class="sx">More inbound leads in 60 days</div></div>
+      <div><div class="sn">30</div><div class="sx">Videos delivered per month</div></div>
+      <div><div class="sn">0</div><div class="sx">Upfront risk to start</div></div>
+    </div>
+
+    <hr class="dv">
+    <div class="sl fade f1">Start completely risk-free</div>
+
+    <div class="fc fade f2">
+      <span class="fb">Free Trial — Prove the ROI first</span>
+      <div class="ftt">See results before you invest a single dollar.</div>
+      <p class="fd">Send me your raw footage. I'll deliver 2 fully-edited, high-retention videos + a strategic content audit. Keep the videos regardless — no pitch, no pressure.</p>
+      <div class="pks">
+        <span class="pk">✓ 2 Free Sample Edits</span>
+        <span class="pk">✓ Content Strategy Audit</span>
+        <span class="pk">✓ No commitment required</span>
+        <span class="pk">✓ Keep videos either way</span>
+      </div>
+      <a class="bwa" href="https://wa.me/919407453430?text=Hi%20Raj!%20I%20want%20to%20claim%20my%20free%20trial" target="_blank">
+        <svg class="wi" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Claim Free Trial on WhatsApp
+      </a>
+    </div>
+
+    <div class="sl fade f1">Choose your growth plan</div>
+    <div class="tgr">
+      <div class="tr fade f3">
+        <span class="tt tt1">Growth</span>
+        <div class="tn">Content Growth Partner</div>
+        <div class="tf">For coaches ready to scale their audience consistently</div>
+        <div class="pr"><span class="pc">$600</span><span class="pp">/ mo</span></div>
+        <div class="pbill">Billed monthly · Cancel anytime</div>
+        <div class="vn">Consistent, high-retention content — your brand grows while you coach.</div>
+        <div class="ts"></div>
+        <div class="fi"><div class="dot dgr"></div><div class="ftx"><b>30 Premium Short-Form Videos</b> <span>· Reels, Shorts &amp; TikToks</span></div></div>
+        <div class="fi"><div class="dot dgr"></div><div class="ftx"><b>AI-Engineered Hook Scripts</b> <span>· Stop-the-scroll openings</span></div></div>
+        <div class="fi"><div class="dot dgr"></div><div class="ftx"><b>Thumbnail &amp; Cover Design</b> <span>· CTR-optimized visuals</span></div></div>
+        <div class="fi"><div class="dot dgr"></div><div class="ftx"><b>Weekly Trend Research</b> <span>· Viral audios &amp; formats</span></div></div>
+        <div class="fi"><div class="dot dgr"></div><div class="ftx"><b>Content Calendar</b> <span>· Strategic posting plan</span></div></div>
+        <div class="ctr">
+          <a class="bwo" href="https://wa.me/919407453430?text=Hi%20Raj!%20I%27m%20interested%20in%20the%20Content%20Growth%20Partner%20at%20%24600%2Fmonth" target="_blank">Get Started →</a>
+        </div>
+      </div>
+      <div class="tr fe fade f4">
+        <div class="rb">Most Popular</div>
+        <span class="tt tt2">Authority</span>
+        <div class="tn">Full Authority Partner</div>
+        <div class="tf">For coaches scaling to consistent high-ticket revenue</div>
+        <div class="pr"><span class="pc">$1,000</span><span class="pp">/ mo</span></div>
+        <div class="pbill">Billed monthly · Cancel anytime</div>
+        <div class="vn">Complete done-for-you system — content, automation &amp; account growth managed for you.</div>
+        <div class="ts"></div>
+        <div class="fi"><div class="dot dg"></div><div class="ftx"><b>Everything in Growth Plan</b> <span>· Full content engine</span></div></div>
+        <div class="fi"><div class="dot dg"></div><div class="ftx"><b>ManyChat Automation</b> <span>· Every comment → booked call</span></div></div>
+        <div class="fi"><div class="dot dg"></div><div class="ftx"><b>Long-Form Repurposing</b> <span>· 1 podcast = 30 short clips</span></div></div>
+        <div class="fi"><div class="dot dg"></div><div class="ftx"><b>Full Account Management</b> <span>· Posting, captions &amp; SEO</span></div></div>
+        <div class="fi"><div class="dot dg"></div><div class="ftx"><b>Monthly Growth Report</b> <span>· Data on what's converting</span></div></div>
+        <div class="fi"><div class="dot dg"></div><div class="ftx"><b>48hr Priority Delivery</b> <span>· Always first in queue</span></div></div>
+        <div class="ctr">
+          <a class="bwa" href="https://wa.me/919407453430?text=Hi%20Raj!%20I%27m%20interested%20in%20the%20Full%20Authority%20Partner%20at%20%241%2C000%2Fmonth" target="_blank">
+            <svg class="wi" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Apply Now →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="dv">
+
+  <!-- TESTIMONIALS -->
+  <section>
+    <div class="sl fade f1">Client Love</div>
+    <h2 class="tg fade f2">What coaches are <strong>saying.</strong></h2>
+    <div class="test-placeholder fade f3">
+      <div class="test-icon">⏳</div>
+      <div class="test-title">Testimonials Coming Soon</div>
+      <div class="test-sub">Currently onboarding first clients through the Free Accelerator.<br>Real results. Real reviews. Watch this space.</div>
+    </div>
+  </section>
+
+  <hr class="dv">
+
+  <!-- FAQ -->
+  <section>
+    <div class="sl fade f1">FAQ</div>
+    <h2 class="tg fade f2">Common <strong>questions.</strong></h2>
+    <div class="fade f3">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggle(this)"><span class="faq-q-text">Do I need to provide a script?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a">No — that's my job. I write AI-engineered hooks and scripts based on your niche and audience psychology. You just hit record. Raw footage works perfectly.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggle(this)"><span class="faq-q-text">What type of coaches do you work with?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a">I work with coaches across Dating & Relationships, Life Coaching, Mindset, Fitness, Business, Spirituality, and Personal Finance. If you have valuable expertise and want to scale your reach — we're a great fit.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggle(this)"><span class="faq-q-text">How does the free trial work?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a">Simple — send me your raw footage via WhatsApp. I'll edit 2 complete videos + give you a full content audit. You keep the videos no matter what. Zero payment, zero commitment, zero pressure.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggle(this)"><span class="faq-q-text">How long does editing take?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a">Standard delivery is 3-5 business days per batch. Authority Partners receive 48hr priority delivery. Rush delivery available on request.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggle(this)"><span class="faq-q-text">What is ManyChat automation?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a">ManyChat lets us set up automated DM flows triggered by comments on your posts. Someone comments "FREE" → they instantly receive your lead magnet or booking link via DM. Every post becomes an active lead generator — 24/7.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggle(this)"><span class="faq-q-text">What if I don't see results?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a">If you don't see tangible improvement in your content quality and engagement within 90 days, we'll work together for free until you do. I'm fully committed to your growth — this partnership only works when your results work.</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="dv">
+  <div class="cta-final fade f4">
+    <div class="cta-final-title">Let Me Show You What Your<br>Content Can <span>Really Do.</span></div>
+    <div class="cta-final-sub">I'll edit your first reel for free — so you can see the difference yourself. No contracts. No risk. Just results.</div>
+    <div class="cta-center">
+      <a class="bwa" href="https://wa.me/919407453430?text=Hi%20Raj!%20I%27d%20like%20to%20get%20my%20free%20sample%20edit" target="_blank">
+        <svg class="wi" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Get Free Sample Edit
+      </a>
+      <a class="bwo" href="https://www.linkedin.com/in/rajvermagrowth" target="_blank">Connect on LinkedIn →</a>
+    </div>
+    <p class="fn" style="margin-top:1.25rem">Or DM <a href="https://x.com/Rajvermagrowth" target="_blank">"SAMPLE" on X @Rajvermagrowth</a> to get started</p>
+  </div>
+
+  <!-- FOOTER SOCIAL -->
+  <div class="footer-social fade f5">
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/rajvermagrowth" target="_blank" class="footer-link">LinkedIn</a>
+      <span class="footer-sep">·</span>
+      <a href="https://x.com/Rajvermagrowth" target="_blank" class="footer-link">X (Twitter)</a>
+      <span class="footer-sep">·</span>
+      <a href="https://wa.me/919407453430" target="_blank" class="footer-link">WhatsApp</a>
+      <span class="footer-sep">·</span>
+      <a href="https://instagram.com/raj.contentengine" target="_blank" class="footer-link">Instagram</a>
+    </div>
+    <div class="footer-copy">© 2026 Raj Verma · Video Growth Partner</div>
+  </div>
+
+</div>
+<script>
+function toggle(el){
+  const item=el.parentElement;
+  const isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
+  if(!isOpen)item.classList.add('open');
+}
+</script>
+</body>
+</html>
